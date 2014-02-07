@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'mysql2'
 gem  'rspec-rails'
+gem 'bootstrap-sass', '~> 3.1.0.2'
+gem 'slim-rails'
+
 
 group :test do
 	gem 'selenium-webdriver'

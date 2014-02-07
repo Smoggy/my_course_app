@@ -1,0 +1,41 @@
+@import "bootstrap";
+
+
+
+
+#logo {
+	float :left;
+	margin-right: 10px;
+	font-size: 1.7 em;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 01px;
+	padding-top: 9px;
+	font-weight: bold;
+	line-height: 1;
+	&:hover{
+		color: white;
+		text-decoration: none;
+	}	
+}
+
+footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid black;
+	color: $gray-light;
+	a {
+		color: $gray;
+	}
+	small {
+		color: $gray-darker;
+	}
+	ul {
+		float: right;
+		list-style: none;
+		li {
+			float: left;
+			margin-left: 10px;
+		}
+	}
+}
