@@ -1,0 +1,12 @@
+
+-if signed_in?
+	ul.nav.navbar-nav.side-nav
+		-if current_user.is_admin?
+            li.dropdown
+              a href="#" class="dropdown-toggle" data-toggle="dropdown" Dropdown
+              ul.dropdown-menu
+                li =link_to "Create User",  new_user_path
+				li =link_to "Show Users", users_path
+			li: a Second
+			li: a Third
+            

@@ -1,0 +1,9 @@
+
+
+<li>
+	<%= user.name %>
+	<%= link_to "update", edit_user_path(user) %>
+	<%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
+
+
+</li>

@@ -5,7 +5,9 @@ gem 'mysql2'
 gem  'rspec-rails'
 gem 'bootstrap-sass', '~> 3.1.0.2'
 gem 'slim-rails'
-
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+gem 'faker'
 
 group :test do
 	gem 'selenium-webdriver'

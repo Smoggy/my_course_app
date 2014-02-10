@@ -1,0 +1,13 @@
+
+h1 Sign in
+
+.row
+	.span6.offset3
+	= form_for(:session, url: sessions_path) do |f|
+		= f.label :login
+		= f.text_field :login
+
+		= f.label :password
+		= f.text_field :password
+
+		= f.submit class: "btn btn-large btn-primary", value: "Sign In"

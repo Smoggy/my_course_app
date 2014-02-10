@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20140207160835) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "login"
-    t.string   "password"
+    t.string   "password_digest"
     t.string   "remember_token"
     t.string   "string"
     t.integer  "role_id"

@@ -13,9 +13,21 @@ end
 
 def make_users
 	adminRole = Role.find_by(name: "admin")
+	teacherRole = Role.find_by(name: "teacher")
 	User.create!(name: "Example User",
-				 login: "login",
+				 login: "login1",
 				 password: "qwerty",
 				 password_confirmation: "qwerty",
 				 role: adminRole )
+	11.times do |n|
+	    name = Faker::Name.name
+	    login = "login#{n+2}"
+	    password = "password"
+	    User.create!(name: name,
+	                 login: login,
+	                 password: password,
+	                 password_confirmation: password,
+	                 role: teacherRole)
+	end
+
 end
