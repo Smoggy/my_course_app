@@ -1,6 +1,19 @@
 
 <h1>All groups</h1>
 
+<%= form_for(@group, :html => { :class => "form-horizontal" }) do |f| %>
+	<fieldset>
+
+		<%= render 'shared/error_messages', object: f.object %>
+		
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+
+		<%= f.submit "Create group", class: "btn btn-large btn-primary" %>
+		
+	</fieldset>
+<% end %>
+
 <%= will_paginate %>
 
 <ul class="groups">

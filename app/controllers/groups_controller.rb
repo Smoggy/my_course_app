@@ -1,7 +1,13 @@
 class GroupsController < ApplicationController
 
 	def create
-		
+		@group = Group.new(groups_params)
+		if @group.save
+			redirect_to groups_path
+		else
+			@groups = Group.all.paginate(page: params[:page])
+			render "groups/index"
+		end
 	end
 
 	def destroy
@@ -10,11 +16,12 @@ class GroupsController < ApplicationController
 
 	def index
 		@groups = Group.all.paginate(page: params[:page])
+		@group = Group.new
 	end
 
 	private
 
 		def groups_params
-			params.require(:group).permite(:name)
+			params.require(:group).permit(:name)
 		end
 end
