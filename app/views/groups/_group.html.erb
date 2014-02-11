@@ -1,0 +1,10 @@
+
+
+
+<li>
+	<%= group.name %>
+	<%= link_to "View and add students", students_path(group) %>
+	<%= link_to "delete", group, method: :delete, data: { confirm: "You sure?" } %>
+
+
+</li>

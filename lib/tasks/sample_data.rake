@@ -3,6 +3,7 @@ namespace :db do
 	task populate: :environment do
 		make_roles
 		make_users
+		make_groups
 	end
 end
 
@@ -29,5 +30,14 @@ def make_users
 	                 password_confirmation: password,
 	                 role: teacherRole)
 	end
+
+end
+
+def make_groups
+	Group.create!(name: "MF-11")
+	Group.create!(name: "MF-12")
+end
+
+def make_students
 
 end

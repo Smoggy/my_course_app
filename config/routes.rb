@@ -1,5 +1,8 @@
 MyCourseApp::Application.routes.draw do
 
+
+  resources :groups, only: [:index, :create, :destroy]
+  resources :students
   resources :users
   resources :sessions, only: [:new, :create, :destroy ]
 
