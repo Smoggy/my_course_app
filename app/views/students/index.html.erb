@@ -1,0 +1,22 @@
+
+<h1> Students of the group <%= @group.name %> </h1>
+
+<%= will_paginate %>
+
+<ul>
+<%= render @students %>
+</ul>
+
+<%= will_paginate %>
+
+<% if @group.has_vacancies? %>
+	<%= link_to "Add new Student", new_student_path(@group), class: "btn btn-large btn-primary" %>
+<% else %>
+	<p> Sorry but there are already too many students in the group. So you can't add anyone new.</p>
+<% end %>
+
+<%= link_to "Back to groups list", groups_path, class: "btn btn-large btn-primary" %>
+
+
+
+
