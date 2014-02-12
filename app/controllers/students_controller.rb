@@ -15,6 +15,7 @@ class StudentsController < ApplicationController
 		@student.group = Group.find(params[:student][:group])
 
 		if @student.save
+			flash[:success] = "Student created"
 			redirect_to students_path(@student.group)
 		else
 			render 'new'
@@ -26,7 +27,11 @@ class StudentsController < ApplicationController
 	end
 
 	def destroy
-
+		student = Student.find(params[:id])
+		group = student.group
+		student.destroy
+		flash[:success] = "Student deleted"
+		redirect_to students_url(group)
 	end
 
 	private 
